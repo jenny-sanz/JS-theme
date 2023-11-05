@@ -1,0 +1,148 @@
+@charset "UTF-8";
+/*
+Theme Name: JS-theme
+Theme URI: https://www.jennifer-sanz.fr
+Author: Jennifer Sanz
+Author URI: https://www.jennifer-sanz.fr
+Description: thème personnalisé sur mesure pour presenter mon portfolio
+Version: 1.0
+*/
+
+:root {
+    /* couleurs */
+    --main-bg-color: #f6f6f6;
+    --color-black-grey: #2f2f2f;
+    --color-black: #181818;
+    --or: #cca25d;
+    --gradient-or: linear-gradient(135deg, rgba(220, 191, 122, 1) 0%, rgba(211, 208, 180, 1) 25%, rgba(169, 136, 78, 1) 51%, rgba(252, 242, 188, 1) 76%, rgba(220, 191, 122, 1) 100%);
+
+    /* animation fleche section profil */
+    --arrow-height: 50px;
+    --arrow-width: calc(var(--arrow-height) * 5 / 6);
+    --dot-size: calc(var(--arrow-height) / 6);
+}
+
+@font-face {
+    font-family: "jetBrains";
+    src: url("assets/fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+    font-display: swap
+}
+
+@font-face {
+    font-family: "caveat";
+    src: url("assets/fonts/Caveat-VariableFont_wght.ttf") format("truetype");
+    font-display: swap
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'jetBrainsMono', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+
+}
+//* scrollbar
+::-webkit-scrollbar {
+  width: 12px;
+   @media screen and (max-width: 767px){
+    width: 5px;
+   }
+}
+::-webkit-scrollbar-track {
+  background: var(--color-black-grey);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-or);
+  border-radius: 4px;  
+  &:hover{
+    background: var(--or);
+  }
+}
+
+body {
+    background-color: var(--main-bg-color);
+    overflow-x: hidden;
+   
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 40px 0;
+    gap: 10px;
+
+
+    @media screen and (max-width: 465px),
+    screen and (max-width: 768px),
+    screen and (max-width: 1024px) {
+        max-width: 90vw;
+    }
+
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'caveat', monospace;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 50px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 35px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        font-size: 40px;
+    }
+}
+
+h3 {
+    font-size: 40px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 25px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        font-size: 30px;
+    }
+}
+
+a {
+    color: var(--color-black-grey);
+}
+
+p {
+    font-family: 'jetBrains', sans-serif;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    text-align: justify;
+
+    @media screen and (max-width: 767px) {
+        font-size: 14px;
+    }
+}
+
+//* import des templates css 
+/* Header - Footer */
+@import 'assets/sass/header';
+@import 'assets/sass/footer';
+/* Page d'accueil */
+@import 'assets/sass/profil';
+@import 'assets/sass/portfolio';
+@import 'assets/sass/projet-details';
+@import 'assets/sass/container-projets';
+@import 'assets/sass/contact';
+/* Modale de contact */
+@import 'assets/sass/modale-contact';
+/* page 404 */
+@import 'assets/sass/404';
+

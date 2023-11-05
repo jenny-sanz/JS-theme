@@ -1,0 +1,36 @@
+.contact {
+    padding: 6em 0;
+
+    .container {
+        gap: 80px;
+        align-items: center;
+
+        .bloc-titre {
+            @include blocTitre(550px, 190px);
+            align-self: center;
+
+            @media screen and (max-width: 767px) {
+                @include blocTitre(228px, 150px);
+                text-align: center;
+                padding-inline: 25px;
+            }
+
+
+
+            &.visible {
+                @include bloc-titre-anim;
+
+            }
+
+        }
+
+
+        p {
+            text-align: center;
+        }
+
+        .button-contact {
+            @include btn-secondaire;
+        }
+    }
+}
