@@ -1,0 +1,165 @@
+.container {
+
+    .container-projets {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
+        grid-template-rows: auto;
+        width: 90%;
+        gap: 150px 250px;
+        place-items: center;
+        margin-bottom: 3em;
+
+        &.visible {
+            @include fade-in;
+        }
+
+        @media screen and (max-width: 767px) {
+            gap: 120px;
+            margin-bottom: 0;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1280px) {
+            gap: 50px;
+        }
+
+        @media screen and (max-width: 767px),
+        screen and (min-width: 768px) and (max-width: 1280px) {
+            width: 90%;
+            flex-direction: column;
+
+            grid-template-columns: 1fr;
+        }
+
+        .post-container {
+            display: flex;
+            position: relative;
+            width: 80%;
+            aspect-ratio: 1/1;
+            position: relative;
+            margin-left: 5em;
+
+            &.visible {
+                @include fade-in;
+
+            }
+
+            @media screen and (max-width: 767px) {
+                width: 70%;
+                margin-left: 0;
+            }
+
+            .titre-projet {
+                position: absolute;
+                font-family: 'jetBrainsMono', sans-serif;
+                font-size: 60px;
+                font-weight: lighter;
+                top: 60px;
+                left: -2em;
+                color: var(--main-bg-color);
+                padding-inline: 20px;
+                background-color: var(--color-black-grey);
+                z-index: 2;
+
+                @media screen and (max-width: 767px) {
+                    top: -4px;
+                    left: 0;
+                    font-size: 30px;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+
+            .bloc-img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                /* Ajoutez cette ligne pour positionner l'overlay */
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                /* Ajoutez l'overlay */
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    /* Animation de transition */
+                }
+
+                &:hover::before {
+                    opacity: 1;
+                    /* Augmentez l'opacité au survol */
+                }
+            }
+
+            h4 {
+                position: absolute;
+                bottom: 1em;
+                right: .7em;
+                writing-mode: vertical-rl;
+                color: var(--main-bg-color);
+                font-size: 16px;
+                font-weight: lighter;
+                 @media screen and (max-width: 767px) {
+                    font-size: 12px;
+                }
+            }
+
+            .arrow-down {
+                position: absolute;
+                top: 75%;
+                left: -6em;
+
+                @media screen and (max-width: 767px) {
+                    display: none;
+                }
+
+                &.visible {
+                    @include bounce-arrow-down;
+
+                    
+                }
+
+            }
+
+            .link-post {
+                color: var(--color-black-grey);
+                position: absolute;
+                top: 92%;
+                left: -6em;
+                font-size: 20px;
+                text-decoration: none;
+
+                @media screen and (max-width: 767px) {
+                    left: 1em;
+                    top: 110%;
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    &:before {
+                        content: url("https://img.icons8.com/ios/40/right--v1.png");
+                    }
+
+                }
+
+                &:hover {
+                    color: var(--or);
+                    font-weight: bold;
+                }
+            }
+        }
+
+    }
+}
