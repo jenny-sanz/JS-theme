@@ -1,0 +1,88 @@
+@import 'mixins/mixins';
+
+#content {
+    height: auto;
+    width: 100%;
+    color: var(--main-bg-color);
+    padding: 6em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(24, 24, 24, 1) 0%, rgba(47, 47, 47, 1) 50%, rgba(24, 24, 24, 1) 100%);
+    @media screen and (min-height: 1207px) {
+            height: 100vh;
+        }
+
+    .page-header {
+        height: 150px;
+        line-height: 153px;
+        //margin-top: 9em ;
+       @media screen and (max-width: 767px){
+              height: 122px;
+    line-height: 122px;
+        }
+
+        h1 {
+            font-family: 'jetBrains', sans-serif;
+            color: var(--color-black);
+            font-size: 220px;
+            letter-spacing: 10px;
+            margin: 0px;
+            font-weight: 700;
+            text-shadow: 2px 2px 0px var(--main-bg-color), -2px -2px 0px var(--main-bg-color);
+            line-height: 0.5;
+            @media screen and (max-width: 767px){
+                  font-size: 122px;
+            }
+
+            span {
+                text-shadow: 2px 2px 0px #cba25d, -2px -2px 0px #cba25d, 0px 0px 8px #6c3a01;
+
+            }
+        }
+    }
+
+    .page-wrapper {
+
+        max-width: 80%;
+        height: auto;
+        margin: 0 auto;
+        padding: 40px 0;
+
+        .page-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+
+            h2 {
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+
+                .contact {
+                    color: var(--or);
+                    text-decoration: none;
+                   font-size: 18px;
+                   font-family: 'jetBrains', sans-serif;
+                   font-weight: bold;
+
+                    &:hover {
+                        color: var(--main-bg-color);
+
+                    }
+                }
+            }
+
+            .button {
+                @include btn-principal;
+
+            }
+        }
+
+    }
+}
