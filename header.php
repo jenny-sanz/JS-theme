@@ -13,7 +13,8 @@ if (!defined('ABSPATH')) {
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
-	<title>Jennifer-Sanz</title>
+	<title>Jennifer Sanz - Portfolio </title>
+	<meta name="description" content="Explorez mon portfolio créatif: Découvrez mon travail passionné et innovant dans le développement web sur WordPress. Explorez une collection de sites web dynamiques, d'interfaces utilisateur élégantes et de solutions technologiques novatrices. Plongez dans mon monde de création numérique et découvrez comment je transforme des idées en expériences en ligne exceptionnelles.">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 </head>
@@ -39,8 +40,6 @@ if (!defined('ABSPATH')) {
 
 			<!-- menu mobile -->
 			<div class="btn-menu">
-				<!-- <img width="34" height="34" src="https://img.icons8.com/ios-filled/50/f6f6f6/circled-menu.png" alt="circled-menu" /> -->
-				<!-- <img width="34" height="34" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/f6f6f6/external-menu-basic-ui-elements-flatart-icons-outline-flatarticons.png" alt="external-menu-basic-ui-elements-flatart-icons-outline-flatarticons" /> -->
 				<img width="34" height="34" src="https://img.icons8.com/material/24/f6f6f6/squared-menu--v2.png" alt="squared-menu--v2" />
 			</div>
 
@@ -55,7 +54,7 @@ if (!defined('ABSPATH')) {
 					)
 				);
 				?>
-				<div class="sociaux-home">
+				<div class="sociaux">
 					<a href="https://www.linkedin.com/in/jennifer-sanz/" target="_blank" aria-label="linkedin">
 						<i class="fa-brands fa-linkedin fa-2xl"></i>
 					</a>
@@ -80,9 +79,16 @@ if (!defined('ABSPATH')) {
 						</a>
 					</div>
 					<div>
-						<a class="mobile-link" href="<?php echo home_url('/#portfolio'); ?>">
+						<a class="mobile-link" href="<?php echo home_url('/#competences'); ?>">
+							<i class="fa-solid fa-code fa-2xl"></i>
+							<p>Compétences</p>
+						</a>
+					</div>
+
+					<div>
+						<a class="mobile-link" href="<?php echo home_url('/#projets'); ?>">
 							<i class="fa-solid fa-desktop fa-2xl"></i>
-							<p>Portfolio</p>
+							<p>Projets</p>
 						</a>
 					</div>
 
@@ -95,11 +101,13 @@ if (!defined('ABSPATH')) {
 					<div>
 						<a class="mobile-link" href="https://www.linkedin.com/in/jennifer-sanz/" target="_blank" aria-label="linkedin">
 							<i class="fa-brands fa-linkedin fa-2xl"></i>
+							<p>Linkedin</p>
 						</a>
 					</div>
 					<div>
 						<a class="mobile-link" href="https://github.com/jenny-sanz?tab=repositories" target="_blank" aria-label="github">
 							<i class="fa-brands fa-github fa-2xl"></i>
+							<p>Github</p>
 						</a>
 					</div>
 
@@ -110,7 +118,7 @@ if (!defined('ABSPATH')) {
 		</nav>
 
 		<!-- HERO HEADER -->
-		<?php if (is_home()) : ?>
+		<?php if (is_front_page()) : ?>
 			<div class="banner">
 				<div class="content">
 					<!-- bloc text -->
@@ -129,7 +137,7 @@ if (!defined('ABSPATH')) {
 								</div>
 							</div>
 						</h1>
-						<h2> prête à donner vie à vos idées en ligne !</h2>
+						<h2> Prête à donner vie à vos idées en ligne !</h2>
 						<div class="buttons">
 							<button class="button-contact">Contactez-moi !</button>
 							<div class="button-cv">
@@ -147,7 +155,6 @@ if (!defined('ABSPATH')) {
 					<!-- bloc photo -->
 					<div class="bloc-photo">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/photo/jenny_hero_header.webp" alt="photo de profil">
-						<!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/photo/jenny_hero_header_html.png" alt="photo de profil"> -->
 					</div>
 				</div>
 

@@ -1,0 +1,116 @@
+@import 'mixins/mixins';
+
+.competences {
+    width: 100%;
+    height: auto;
+    background-color: #f0f0f0;
+
+    @media screen and (max-width: 767px) {
+        padding-bottom: 4em;
+
+    }
+
+    .container {
+        align-items: center;
+        padding: 4em 0;
+        gap: 80px;
+
+        @media screen and (max-width: 767px) {
+            padding: 4em 0;
+            gap: 30px;
+        }
+
+        .bloc-titre {
+            @include blocTitre(250px, 250px);
+            align-self: center;
+
+            &.visible {
+                @include bloc-titre-anim;
+
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 150px;
+                height: 150px;
+            }
+
+
+        }
+
+        /* inclusion bloc de text avec une largeur des texts de 90% */
+        .bloc-text {
+            @include bloc-text (100%);
+
+            &.visible {
+                @include fade-in;
+
+            }
+        }
+
+        .container-pictos {
+            width: 100vw;
+            height: auto;
+            background: radial-gradient(circle, rgba(24, 24, 24, 1) 0%, rgba(47, 47, 47, 1) 50%, rgba(24, 24, 24, 1) 100%);
+            padding: 4em 0;
+            gap: 50px;
+            @include flex-center;
+            flex-wrap: wrap;
+
+            .picto {
+                width: 371px;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                opacity: 0;
+                transform-origin: center bottom;
+                transform: scale(0.6);
+                transition: opacity 0.5s ease, transform 0.5s ease;
+
+                >div {
+                    margin-top: 1.5em;
+
+                    img {
+                        object-fit: cover;
+                        width: 132px;
+                        height: 89px;
+
+
+                        @media screen and (max-width: 767px) {
+                            width: 130px;
+                        }
+                    }
+                }
+
+                p {
+                    color: var(--main-bg-color);
+                    text-align: center;
+                    line-height: normal;
+                    font-weight: 600;
+                }
+
+                &:nth-child(1) {
+                    &.visible {
+                        @include animatePicto;
+                    }
+
+
+                }
+
+                &:nth-child(2) {
+                    &.visible {
+                        @include animatePicto;
+                    }
+
+                }
+
+                &:nth-child(3) {
+                    &.visible {
+                        @include animatePicto;
+                    }
+                }
+            }
+        }
+    }
+}

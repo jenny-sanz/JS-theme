@@ -40,8 +40,10 @@ Version: 1.0
     font-family: 'jetBrainsMono', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
+}
 
-
+html{
+overflow-x: hidden!important;
 }
 //* scrollbar
 ::-webkit-scrollbar {
@@ -63,8 +65,8 @@ Version: 1.0
 
 body {
     background-color: var(--main-bg-color);
-    overflow-x: hidden;
-   
+      
+
 }
 .container {
     display: flex;
@@ -76,8 +78,7 @@ body {
     gap: 10px;
 
 
-    @media screen and (max-width: 465px),
-    screen and (max-width: 768px),
+    @media 
     screen and (max-width: 1024px) {
         max-width: 90vw;
     }
@@ -95,7 +96,7 @@ h2 {
     font-size: 50px;
 
     @media screen and (max-width: 767px) {
-        font-size: 35px;
+        font-size: 32px;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -137,7 +138,8 @@ p {
 @import 'assets/sass/footer';
 /* Page d'accueil */
 @import 'assets/sass/profil';
-@import 'assets/sass/portfolio';
+@import 'assets/sass/competences';
+@import 'assets/sass/projets';
 @import 'assets/sass/projet-details';
 @import 'assets/sass/container-projets';
 @import 'assets/sass/contact';

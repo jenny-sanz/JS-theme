@@ -113,7 +113,7 @@
                 }
             }
 
-            .sociaux-home {
+            .sociaux {
                 width: 80px;
                 display: flex;
                 align-items: center;
@@ -203,7 +203,7 @@
                 @media screen and (min-height: 1207px) {
                     width: 50%;
                     gap: 126px;
-                    
+
                 }
 
                 .title-1 {
@@ -363,6 +363,7 @@
 
                     @media screen and (max-width: 767px) {
                         flex-direction: column;
+                        width: 100%;
                     }
 
                     .button-cv {
@@ -385,7 +386,7 @@
                         font: {
                             size: 20px;
                             family: 'jetBrains', monospace;
-                            weight: 200;
+                            weight: normal;
                         }
 
                         &:hover {
@@ -399,6 +400,11 @@
                         @media screen and (max-width: 767px) {
                             width: 200px;
                             gap: 20px;
+
+                            font: {
+                                size: 14px;
+
+                            }
                         }
 
 
@@ -494,13 +500,13 @@
             @include flex-center;
             flex-wrap: wrap;
             padding-top: 3em;
-            row-gap: 20px;
+            row-gap: 10px;
             column-gap: 30px;
-            
+
 
             >div {
                 width: calc(50% - 18.5px);
-                height: 150px;
+                height: 120px;
                 @include flex-center;
                 flex-direction: column;
 
