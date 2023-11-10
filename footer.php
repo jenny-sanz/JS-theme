@@ -25,7 +25,7 @@ if (!defined('ABSPATH')) {
     // integration de la popup de contact
     get_template_part('template-parts/modale_contact') ?>
 
-    <a href="#top" class="to-top">Back to top</a>
+    <a href="#top" class="to-top">Retour en haut</a>
 </footer>
 
 <?php wp_footer(); ?>
