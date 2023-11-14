@@ -95,8 +95,21 @@
             </div>
             <div id="catalogue-projets" class="container-projets" data-page="1">
                 <?php
-                get_template_part('template-parts/container_projet');
+                $args_projet = array(
+                    'post_type' => 'projets',
+                    'posts_per_page' => 4,
+                );
 
+                $query_projets = new WP_Query($args_projet);
+                if ($query_projets->have_posts()) {
+                    while ($query_projets->have_posts()) {
+                        $query_projets->the_post();
+
+                   get_template_part('template-parts/container_projet');
+               
+                    }
+                    wp_reset_postdata();
+                }
                 ?>
             </div>
             <div id="load-more-container">

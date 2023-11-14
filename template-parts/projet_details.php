@@ -61,7 +61,3 @@ $github = get_field('github');
     </div>
 
 </article>
-
-
-
-<?php get_footer(); ?>
