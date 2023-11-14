@@ -37,6 +37,7 @@
      align-items: center;
      flex-wrap: wrap;
      overflow-y: auto;
+     overflow-x: hidden;
      position: relative;
 
      @media screen and (max-width: 1279px) {
@@ -168,7 +169,7 @@
              align-items: flex-start;
              gap: 1rem;
              margin-top: 2em;
-
+            
              @media screen and (max-width: 767px) {
                  align-items: center;
              }
@@ -182,6 +183,8 @@
              label {
                  color: var(--color-black-grey);
                  font-weight: 400;
+                 width: 100%;
+                 margin-left: 5px;
              }
 
              input,
@@ -192,9 +195,10 @@
                  height: 2.5rem;
                  padding-left: 10px;
                  background-color: #FFF;
+                 margin-left: 5px;
 
                  @media screen and (max-width: 767px) {
-                     width: 98%;
+                     width: 97%;
                  }
              }
 
@@ -205,12 +209,7 @@
 
 
              .btn {
-                 @include btn-secondaire;
-                 margin-left: 1.3em;
-
-                 @media screen and (max-width: 767px) {
-                     margin-left: 0;
-                 }
+                 @include btn-secondaire(350px);
              }
 
              .wpcf7-spinner {

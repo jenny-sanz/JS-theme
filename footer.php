@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
 
 <!-- coder mon footer  -->
 <footer class="site__footer">
-    <p>&copy Jennifer Sanz - 2023 | Tous droits réservés </p>
+    <p class="texte">&copy Jennifer Sanz - 2023 | Tous droits réservés </p>
     <!-- menu de navigation wordpress footer -->
     <?php wp_nav_menu(
         array(

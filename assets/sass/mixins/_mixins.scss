@@ -30,7 +30,7 @@
            screen and (min-width: 768px) and (max-width: 1280px) {
                width: 100%;
            }
-            @media screen and (min-height: 1207px){
+            @media screen and (min-width: 1600px) and (min-height: 1207px){
                 text-align: center;
             }
 
@@ -110,14 +110,14 @@
        }
    }
 
-   @mixin btn-secondaire {
+   @mixin btn-secondaire ($width: 300px){
        display: flex;
        justify-content: center;
        align-items: center;
        box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
        text-decoration: none;
        transition: background-color 0.8s;
-       width: 300px;
+       width: $width;
        height: 60px;
        padding: 12px 24px;
        color: var(--color-black);
@@ -142,6 +142,7 @@
 
        @media screen and (max-width: 767px) {
            padding: 8px 16px;
+           width: 276px;
        }
    }
 
@@ -249,22 +250,17 @@
    /*  animation ouverture et fermeture modale de contact */
    @mixin slit-in-vertical {
        animation: slit-in-vertical 0.5s ease-in-out forwards;
-
        @keyframes slit-in-vertical {
            0% {
-
                transform: translateZ(-800px) rotateY(90deg);
                opacity: 0;
            }
-
            50% {
                transform: translateZ(-160px) rotateY(87deg);
                opacity: 1;
            }
-
            100% {
                transform: translateZ(0) rotateY(0);
-
            }
        }
    }

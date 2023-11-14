@@ -5,18 +5,13 @@
     height: auto;
     background-color: #f0f0f0;
 
-    @media screen and (max-width: 767px) {
-        padding-bottom: 4em;
-
-    }
-
     .container {
         align-items: center;
         padding: 4em 0;
         gap: 80px;
 
         @media screen and (max-width: 767px) {
-            padding: 4em 0;
+            padding: 6em 0;
             gap: 30px;
         }
 

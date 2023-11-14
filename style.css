@@ -326,6 +326,7 @@ p {
   .header .banner .content .text-banner {
     width: 50%;
     gap: 126px;
+    margin-right: 4em;
   }
 }
 .header .banner .content .text-banner .title-1 {
@@ -781,11 +782,19 @@ p {
   border-top: 0.5px solid var(--color-black-grey);
   background: radial-gradient(circle, rgb(24, 24, 24) 0%, rgb(47, 47, 47) 50%, rgb(24, 24, 24) 100%);
 }
-.site__footer p, .site__footer ul li a {
+.site__footer .texte,
+.site__footer ul li a {
   font-family: "caveat", monospace;
   font-size: 18px;
   font-weight: bold;
   color: var(--main-bg-color);
+}
+@media screen and (max-width: 767px) {
+  .site__footer .texte,
+  .site__footer ul li a {
+    text-align: center;
+    line-height: normal;
+  }
 }
 .site__footer ul {
   list-style-type: none;
@@ -883,7 +892,7 @@ p {
 }
 @media screen and (max-width: 768px) {
   .profil .container .content {
-    margin: 0 0 4em 0;
+    margin: 2em 0 4em 0;
   }
 }
 .profil .container .content .bloc-titre {
@@ -954,7 +963,7 @@ p {
     width: 100%;
   }
 }
-@media screen and (min-height: 1207px) {
+@media screen and (min-width: 1600px) and (min-height: 1207px) {
   .profil .container .content .bloc-text p {
     text-align: center;
   }
@@ -1126,11 +1135,6 @@ p {
   height: auto;
   background-color: #f0f0f0;
 }
-@media screen and (max-width: 767px) {
-  .competences {
-    padding-bottom: 4em;
-  }
-}
 .competences .container {
   align-items: center;
   padding: 4em 0;
@@ -1139,7 +1143,7 @@ p {
 }
 @media screen and (max-width: 767px) {
   .competences .container {
-    padding: 4em 0;
+    padding: 6em 0;
     gap: 30px;
   }
 }
@@ -1205,7 +1209,7 @@ p {
     width: 100%;
   }
 }
-@media screen and (min-height: 1207px) {
+@media screen and (min-width: 1600px) and (min-height: 1207px) {
   .competences .container .bloc-text p {
     text-align: center;
   }
@@ -1358,7 +1362,7 @@ p {
 }
 @media screen and (max-width: 767px) {
   .projets .container {
-    padding: 4em 0;
+    padding: 0;
     gap: 30px;
   }
 }
@@ -1424,7 +1428,7 @@ p {
     width: 100%;
   }
 }
-@media screen and (min-height: 1207px) {
+@media screen and (min-width: 1600px) and (min-height: 1207px) {
   .projets .container .bloc-text p {
     text-align: center;
   }
@@ -1493,6 +1497,7 @@ p {
 @media screen and (max-width: 767px) {
   .projets .btn {
     padding: 8px 16px;
+    width: 276px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1656,6 +1661,7 @@ p {
 @media screen and (max-width: 767px) {
   .container .bloc-btn .bouton {
     padding: 8px 16px;
+    width: 276px;
   }
 }
 
@@ -1922,6 +1928,7 @@ p {
 @media screen and (max-width: 767px) {
   .contact .container .button-contact {
     padding: 8px 16px;
+    width: 276px;
   }
 }
 
@@ -1994,6 +2001,7 @@ p {
   align-items: center;
   flex-wrap: wrap;
   overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
 }
 @media screen and (max-width: 1279px) {
@@ -2150,6 +2158,8 @@ p {
 .modal-content .form .wpcf7-form label {
   color: var(--color-black-grey);
   font-weight: 400;
+  width: 100%;
+  margin-left: 5px;
 }
 .modal-content .form .wpcf7-form input,
 .modal-content .form .wpcf7-form textarea {
@@ -2159,11 +2169,12 @@ p {
   height: 2.5rem;
   padding-left: 10px;
   background-color: #FFF;
+  margin-left: 5px;
 }
 @media screen and (max-width: 767px) {
   .modal-content .form .wpcf7-form input,
   .modal-content .form .wpcf7-form textarea {
-    width: 98%;
+    width: 97%;
   }
 }
 .modal-content .form .wpcf7-form textarea {
@@ -2177,7 +2188,7 @@ p {
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
   text-decoration: none;
   transition: background-color 0.8s;
-  width: 300px;
+  width: 350px;
   height: 60px;
   padding: 12px 24px;
   color: var(--color-black);
@@ -2188,7 +2199,6 @@ p {
   font-size: 20px;
   font-family: "jetBrains", monospace;
   font-weight: normal;
-  margin-left: 1.3em;
 }
 .modal-content .form .wpcf7-form .btn:hover {
   background-color: var(--color-black);
@@ -2200,11 +2210,7 @@ p {
 @media screen and (max-width: 767px) {
   .modal-content .form .wpcf7-form .btn {
     padding: 8px 16px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .modal-content .form .wpcf7-form .btn {
-    margin-left: 0;
+    width: 276px;
   }
 }
 .modal-content .form .wpcf7-form .wpcf7-spinner {
