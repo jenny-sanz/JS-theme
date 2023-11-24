@@ -47,6 +47,10 @@
              margin-top: -1.5em;
              font-weight: normal;
              margin-left: 3px;
+             @media screen and (max-width: 767px){
+                width: 100%;
+                text-align: center;
+             }
         }
         p {
             text-align: justify;
@@ -55,6 +59,9 @@
                 text-decoration: none;
                 color: var(--color-black-grey);
                 font-weight: bold;
+                 @media screen and (max-width: 767px){
+                width: 100%;
+            }
 
                 &:hover {
                     color: var(--or);

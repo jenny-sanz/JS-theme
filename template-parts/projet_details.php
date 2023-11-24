@@ -56,7 +56,7 @@ $github = get_field('github');
             <img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID())); ?>" alt="<?php the_title(); ?>">
         </div>
         <div class="bloc-btn">
-            <a href="<?php echo esc_url(home_url('#projets')); ?>" class="bouton">Tous les projets</a>
+            <a href="<?php echo esc_url(home_url('#catalogue-projets')); ?>" class="bouton">Tous les projets</a>
         </div>
     </div>
 

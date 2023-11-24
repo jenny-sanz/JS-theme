@@ -20,10 +20,10 @@
             <div class="sociaux">
                 <h3>Suivez-moi</h3>
                 <div>
-                    <a href="https://www.linkedin.com/in/jennifer-sanz/">
+                    <a href="https://www.linkedin.com/in/jennifer-sanz/" target="_blank" aria-label="linkedin">
                         <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
-                    <a href=" https://github.com/jenny-sanz">
+                    <a href=" https://github.com/jenny-sanz" target="_blank" aria-label="github">
                         <i class="fa-brands fa-github fa-2xl"></i>
                     </a>
                 </div>

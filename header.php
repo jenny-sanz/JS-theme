@@ -25,7 +25,7 @@ if (!defined('ABSPATH')) {
 
 	<header id="top" class="header">
 		<!-- container background animé -->
-		<?php if (is_home()) : ?>
+		<?php if (is_front_page()) : ?>
 			<div class="container-background">
 				<img class="background" src="<?php echo get_template_directory_uri(); ?>/assets/img/lines.svg" alt="Image SVG animée">
 			</div>

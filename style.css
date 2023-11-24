@@ -1552,6 +1552,12 @@ p {
   font-weight: normal;
   margin-left: 3px;
 }
+@media screen and (max-width: 767px) {
+  .container .descriptif h3 {
+    width: 100%;
+    text-align: center;
+  }
+}
 .container .descriptif p {
   text-align: justify;
 }
@@ -1559,6 +1565,11 @@ p {
   text-decoration: none;
   color: var(--color-black-grey);
   font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .container .descriptif p a {
+    width: 100%;
+  }
 }
 .container .descriptif p a:hover {
   color: var(--or);
@@ -1674,19 +1685,9 @@ p {
   gap: 150px 250px;
   place-items: center;
   margin-bottom: 3em;
-}
-.container .container-projets.visible {
-  animation: fadeIn 2s ease 0s 1 normal forwards;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  /* &.visible {
+      @include fade-in;
+  } */
 }
 @media screen and (max-width: 767px) {
   .container .container-projets {
@@ -2104,6 +2105,9 @@ p {
   font-size: 16px;
   font-weight: 400;
 }
+.modal-content .bloc-infos .infos-content > div a:hover {
+  color: var(--or);
+}
 .modal-content .bloc-infos .sociaux {
   display: flex;
   justify-content: center;
@@ -2170,11 +2174,13 @@ p {
   padding-left: 10px;
   background-color: #FFF;
   margin-left: 5px;
+  font-size: 16px;
 }
 @media screen and (max-width: 767px) {
   .modal-content .form .wpcf7-form input,
   .modal-content .form .wpcf7-form textarea {
     width: 97%;
+    font-size: 16px;
   }
 }
 .modal-content .form .wpcf7-form textarea {
@@ -2215,6 +2221,9 @@ p {
 }
 .modal-content .form .wpcf7-form .wpcf7-spinner {
   display: none;
+}
+.modal-content .form .wpcf7-form .wpcf7-not-valid-tip {
+  font-size: 14px;
 }
 .modal-content .form .close {
   cursor: pointer;
