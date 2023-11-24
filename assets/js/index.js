@@ -35,7 +35,7 @@ mobileLinks.forEach((link) => {
 
   // Fonction pour vérifier si l'écran est en mode "desktop"
   function isDesktop() {
-    return window.matchMedia("(min-width: 1280px)").matches; // Vous pouvez ajuster cette valeur en fonction de votre conception responsive
+    return window.matchMedia("(min-width: 1281px)").matches; // Vous pouvez ajuster cette valeur en fonction de votre conception responsive
   }
   // Fonction pour vérifier si l'écran est en mode "grand écran" (hauteur minimale de 1027px)
   function isTallScreen() {

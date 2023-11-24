@@ -1,11 +1,11 @@
-console.log('Ajax chargé');
+console.log("Ajax chargé");
 //* Requête Ajax chargement de projets
 
 jQuery(function ($) {
   function loadMorePosts() {
     const catalogue = $("#catalogue-projets");
     const currentPage = parseInt(catalogue.data("page"));
-   
+
     // Effectuer la requête Ajax
     $.ajax({
       url: myAjax.ajaxurl,
@@ -20,6 +20,36 @@ jQuery(function ($) {
         if (response) {
           // Ajouter les nouvelles images au catalogue
           catalogue.append(response);
+
+          // Ajouter la classe CSS "visible" aux nouveaux éléments .post-container
+          catalogue.find(".post-container").addClass("visible");
+
+          // animation fade in au scroll avec scrolltrigger
+          const newProjets = document.querySelectorAll(".post-container");
+          function handleAnimation(element) {
+            element.classList.add("visible");
+          }
+          newProjets.forEach((projet) => {
+            ScrollTrigger.create({
+              trigger: projet,
+              start: "top 105%",
+              end: "bottom 20%",
+              onEnter: () => {
+                handleAnimation(projet);
+              },
+              onEnterBack: () => {
+                handleAnimation(projet);
+              },
+              onLeaveBack: () => {
+                projet.classList.remove("visible");
+              },
+            });
+          });
+
+          // Ajouter la classe CSS "visible" aux nouveaux éléments .arrow-down après un délai de 500 millisecondes (par exemple)
+          setTimeout(function () {
+            catalogue.find(".arrow-down").addClass("visible");
+          }, 100);
           // Mettre à jour le numéro de page dans le conteneur
           catalogue.data("page", currentPage + 1);
           // Rétablir le texte du bouton "Charger plus"
@@ -37,10 +67,7 @@ jQuery(function ($) {
   }
 
   // Attachez les écouteurs d'événements une fois que le DOM est prêt
-  $(document).ready(function () {
-    $("#load-more-btn").on("click", function () {
-      loadMorePosts();
-    });
+  $(document).on("click", "#load-more-btn", function () {
+    loadMorePosts();
   });
 });
-
